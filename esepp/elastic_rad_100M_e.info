@@ -1,0 +1,49 @@
+INPUT PARAMETERS AND SOME INFORMATION ON THE EVENTS:
+
+* Elastic scattering of electrons (e-) on protons;
+* A proton with the dipole form factors;
+* Accurate QED calculation, all the terms;
+* Vacuum polarization: full vacuum polarization correction;
+* Approach of Mo & Tsai for the TPE amplitudes;
+* Full energy of incident leptons: 10604 MeV;
+* Energies of bremsstrahlung photons: from 1 to 9000 MeV;
+* Polar angles of scattered leptons (theta): from 7 to 37 degree;
+* Azimuthal angles of scattered leptons (phi): from -180 to 180 degree;
+* Solid angle: 1.218e+00 steradian;
+* Values of Q^2: from 1.546e+00 to 1.382e+01 GeV^2;
+* Values of epsilon: from 0.476 to 0.989;
+* Warnings: yes. Please be aware of them!
+
+|---------------------------------------|
+|            NUMBER OF EVENTS           |
+|---------------------------------------|
+|             |     e-     |     e+     |
+|---------------------------------------|
+|    Elastic  |    5265882 |         -- |
+|  Inelastic  |   94734118 |         -- |
+|---------------------------------------|
+|      Total  |  100000000 |         -- |
+|---------------------------------------|
+
+|---------------------------------------|
+| INTEGRATED CROSS SECTIONS (microbarn) |
+|---------------------------------------|
+|             |     e-     |     e+     |
+|---------------------------------------|
+|    Elastic  | 5.5359e-04 |         -- |
+|  Inelastic  | 9.9591e-03 |         -- |
+|---------------------------------------|
+|      Total  | 1.0513e-02 |         -- |
+|---------------------------------------|
+
+ROSENBLUTH DIFFERENTIAL CROSS SECTION (averaged over the solid angle):
+1.0751e-03 microbarn / steradian
+
+ACTUAL DIFFERENTIAL CROSS SECTION (averaged over the solid angle):
+e-: 8.6284e-03 microbarn / steradian (delta = 7.0258)
+
+INTEGRATED LUMINOSITY:
+e-: 9.5123e+03 inverse picobarn
+
+It took 3436 seconds to generate 100000000 events
+

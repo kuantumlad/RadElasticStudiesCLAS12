@@ -1,0 +1,42 @@
+JOBNAME:  elastsim
+OS:       centos7
+TRACK:    simulation
+MEMORY:   1400 MB
+PROJECT:  clas12 
+COMMAND:
+source /group/clas12/packages/setup.csh
+module load coatjava/6.3.1
+module load ccdb/1.06.02
+module load root/6.14.04
+module load gemc/4.3.1
+gemc -USE_GUI=0 -N=10000 -INPUT_GEN_FILE="lund, input.lund" /group/clas12/gemc/4.3.1/rga-fall2018.gcard -OUTPUT="evio, elastic.ev"
+$COATJAVA/bin/evio2hipo -s -1.0 -i elastic.ev -o elastic_decoded.hipo
+/home/kenjo/recon-util-yaml/recon-util-yaml -i elastic_decoded.hipo -o elastic_recon.hipo -y /group/clas12/gemc/gcards/rga-fall2018.yaml
+
+OUTPUT_DATA: elastic_recon.hipo
+OUTPUT_TEMPLATE: /volatile/clas12/dmriser/esepp/cooked/inbend_pass3/@INPUT_DATA@.hipo
+INPUT_DATA: input.lund
+INPUT_FILES: 
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/0.lund
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/100.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/101.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/102.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/103.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/104.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/105.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/106.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/107.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/108.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/109.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/10.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/110.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/111.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/112.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/113.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/114.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/115.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/116.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/117.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/118.txt
+/work/clas12/bclary/clas12_lunds/elastic/esepp10/119.txt
+
